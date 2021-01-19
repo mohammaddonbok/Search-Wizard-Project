@@ -48,7 +48,7 @@ public class User {
     private String business_email;
 
     @NotEmpty(message="Description is required")
-    private String desc;
+    private String description;
 
 //    private Boolean approve =false;
 
@@ -81,7 +81,6 @@ public class User {
 
 
     //Generate Getters and Setters
-
 
     public Long getId() {
         return id;
@@ -155,21 +154,13 @@ public class User {
         this.business_email = business_email;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String description) {
+        this.description = description;
     }
-
-//    public Boolean getApprove() {
-//        return approve;
-//    }
-//
-//    public void setApprove(Boolean approve) {
-//        this.approve = approve;
-//    }
 
     public Date getCreatedAt() {
         return createdAt;
@@ -226,6 +217,17 @@ public class User {
     public void setPhones(List<Phone> phones) {
         this.phones = phones;
     }
+
+
+//    public Boolean getApprove() {
+//        return approve;
+//    }
+//
+//    public void setApprove(Boolean approve) {
+//        this.approve = approve;
+//    }
+
+
 
     @PrePersist
     protected void onCreate(){
